@@ -54,13 +54,12 @@ const ScrollEffect = () => {
     <div className="scroll-container">
       <div className="image-container">
         <div className="watch-image">
-          {/* Watch image placeholder */}
         </div>
       </div>
       <div className="text-container">
         {sections.map((section, index) => {
           const { opacity, transform } = getOpacityAndTransform(section.offset, index, sections.length);
-          const isRedText = [0, 2, 4].includes(index); // 1st, 3rd, 5th text in red
+          const isRedText = index === 0 || index === 2 || index === sections.length - 1;
           
           return (
             <div

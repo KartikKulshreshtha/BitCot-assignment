@@ -5,6 +5,9 @@
   min-height: 2000px;
   position: relative;
 }
+.red-text {
+  color: red;
+}
 
 .image-container {
   position: sticky;
