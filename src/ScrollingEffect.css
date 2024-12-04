@@ -1,0 +1,68 @@
+.scroll-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  min-height: 2000px;
+  position: relative;
+}
+
+.image-container {
+  position: sticky;
+  top: 100px;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.watch-image {
+  width: 200px;
+  height: 200px;
+  background: url('https://tokk-ai-dev.bitcotapps.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fthumb1.316baac6.png&w=1920&q=75') no-repeat center center;
+  background-size: cover;
+  border: 10px solid #555;
+  border-radius: 20px;
+  box-shadow:
+    0 0 0 3px white,
+    0 0 0 6px #888; 
+}
+
+.text-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.section {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  width: 100%;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.section.red-text .text {
+  color: red;
+}
