@@ -22,15 +22,14 @@ const ScrollEffect = () => {
     const centerOffset = windowHeight / 2;
   
     const distance = scrollPosition - offset + centerOffset;
-    let translateY = -distance / 3; // Adjust scaling to smooth movement
+    let translateY = -distance / 3;
   
     const opacityRange = windowHeight;
     let opacity;
   
     if (distance < -centerOffset) {
-      opacity = 0; // Fully transparent when out of range
+      opacity = 0;
     } else if (distance >= -centerOffset && distance <= centerOffset) {
-      // Fade in/out effect within range
       opacity = 1 - Math.abs(distance) / opacityRange;
     } else {
       opacity = 0;
@@ -57,7 +56,7 @@ const ScrollEffect = () => {
     const redTextVisible = sections.some((section, index) => {
       const { opacity } = getOpacityAndTransform(section.offset);
       const isRedText = index === 0 || index === 2 || index === sections.length - 1;
-      return isRedText && opacity > 0.5; // Check if red text is visible
+      return isRedText && opacity > 0.5;
     });
 
     setIsRedTextActive(redTextVisible);
