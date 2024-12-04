@@ -5,20 +5,22 @@
   min-height: 2000px;
   position: relative;
 }
-.red-text {
-  color: red;
-}
 
 .image-container {
   position: sticky;
   top: 100px;
   left: 0;
   width: 250px;
-  height: 100vh;
+  height: 35vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-right: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.image-container.active-border {
+  box-shadow: 0 0 0 10px red;
 }
 
 .watch-image {
@@ -26,11 +28,7 @@
   height: 200px;
   background: url('https://tokk-ai-dev.bitcotapps.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fthumb1.316baac6.png&w=1920&q=75') no-repeat center center;
   background-size: cover;
-  border: 10px solid #555;
   border-radius: 20px;
-  box-shadow:
-    0 0 0 3px white,
-    0 0 0 6px #888; 
 }
 
 .text-container {
@@ -41,7 +39,6 @@
   align-items: center;
   width: 100%;
   position: relative;
-  height: 100vh;
 }
 
 .section {
